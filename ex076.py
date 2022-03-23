@@ -1,9 +1,6 @@
-lista = ()
-for i in range(1, 5):
-    nome = input(f'Insira o nome do seu {i}° produto: ')
-    preco = float(input(f'Insira o preço do seu {i}° produto: R$ '))
-    lista += (nome, preco)
+listagem = ('Queijo', 5.3, 'Pão', 0.5, 'Margarina', 2.5, 'Pavê', 0.6, 'Bolo de fubá', 250.99)
 
-print('{0}\n{1:^30}\n{0}'.format('-' * 30, 'PRODUTOS DISPONÍVEIS'))
-for i in range(0, len(lista), 2):
-    print('{:>10}:{}R$ {:.2f}'.format(lista[i], '-' * 10, lista[+ 1]))
+print('{0}\n{1:^40}\n{0}'.format('-' * 40, 'LISTAGEM DE PREÇOS'))
+for i in range(0, len(listagem), 2):
+    print('{:.<30}R$ {:3.2f}'.format(listagem[i], listagem[i + 1]))
+print('-' * 40)
