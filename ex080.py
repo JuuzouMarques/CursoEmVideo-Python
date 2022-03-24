@@ -13,5 +13,6 @@ for i in range(5):
     if not add:
         lista.append(num)
         print('Adicionado ao fim da lista.')
-
-print(lista)
+print('-' * 20)
+print(f'Os valor digitados em ordem foram {lista}')
+print('-' * 20)
