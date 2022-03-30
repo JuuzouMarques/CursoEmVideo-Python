@@ -1,7 +1,6 @@
 lista = []
 while True:
-    valor = int(input('Digite um valor: '))
-    lista.append(valor)
+    lista.append(int(input('Digite um valor: ')))
     escolha = input('Deseja continuar? [S/N] ').strip().upper()[0]
     if escolha == 'N': break
 print('-' * 30)
