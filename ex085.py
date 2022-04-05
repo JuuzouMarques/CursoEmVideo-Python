@@ -1,13 +1,11 @@
-pares = []
-impares = []
-numeros = [pares, impares]
+numeros = [[], []]
 for i in range(1, 8):
     num = int(input(f'Digite o {i}° valor: '))
     if num % 2 == 0:
-        pares.append(num)
+        numeros[0].append(num)
     else:
-        impares.append(num)
-pares.sort()
-impares.sort()
+        numeros[1].append(num)
+numeros[0].sort()
+numeros[1].sort()
 print('-=' * 30)
-print(f'Pares: {pares}\nImpares: {impares}')
+print(f'Pares: {numeros[0]}\nImpares: {numeros[1]}')

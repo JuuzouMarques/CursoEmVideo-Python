@@ -4,16 +4,16 @@ maiorPeso = menorPeso = 0
 while True:
     pessoa.append(input('Nome da pessoa: '))
     pessoa.append(float(input('Peso da pessoa: ')))
-    grupoPessoas.append(pessoa[:])
-    if maiorPeso == 0:
+    if len(grupoPessoas) == 0:
         maiorPeso = menorPeso = pessoa[1]
     else:
         if pessoa[1] > maiorPeso:
             maiorPeso = pessoa[1]
         elif pessoa[1] < menorPeso:
             menorPeso = pessoa[1]
-    resposta = input('Deseja continuar? [S/N] ').strip().upper()[0]
+    grupoPessoas.append(pessoa[:])
     pessoa.clear()
+    resposta = input('Deseja continuar? [S/N] ').strip().upper()[0]
     if resposta == 'N':
         break
 print('-=' * 30)
