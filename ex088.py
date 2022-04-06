@@ -4,8 +4,12 @@ qtdJogos = int(input('Quantos jogos você quer que eu sorteie? '))
 mega = []
 jogos = []
 for i in range(qtdJogos):
-    for j in range(6):
-        jogos.append(randint(1, 60))
+    while True:
+        num = randint(1, 60)
+        if num not in jogos:
+            jogos.append(num)
+        if len(jogos) >= 6: break
+    jogos.sort()
     mega.append(jogos[:])
     jogos.clear()
 for i, jogo in enumerate(mega):
