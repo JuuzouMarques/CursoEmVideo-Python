@@ -12,7 +12,7 @@ def contador(inicio, fim, passo):
         fim -= 1
     sleep(1)
     for i in range(inicio, fim, passo):
-        print(i, end=' ')
+        print(i, end=' ', flush=True)
         sleep(0.5)
     print('FIM!')
 
