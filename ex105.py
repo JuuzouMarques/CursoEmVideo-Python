@@ -6,25 +6,16 @@ def notas(*notas, conc=False):
     :return: Dicionário com a análise das notas
     '''
     retorno = dict()
-    qtd = len(notas)
-    maior = menor = media = 0
-    for i, n in enumerate(notas):
-        if i == 0:
-            maior = menor = n
-        else:
-            if n > maior: maior = n
-            if n < menor: menor = n
-        media += n/len(notas)
-    retorno['total'] = qtd
-    retorno['maior'] = maior
-    retorno['menor'] = menor
-    retorno['media'] = media
+    retorno['total'] = len(notas)
+    retorno['maior'] = max(notas)
+    retorno['menor'] = min(notas)
+    retorno['media'] = sum(notas)/len(notas)
     if conc:
-        if media < 5:
+        if retorno['media'] < 5:
             conceito = 'INSUFICIENTE'
-        elif 5 <= media < 8:
+        elif 5 <= retorno['media'] < 7:
             conceito = 'REGULAR'
-        elif 8 <= media < 9:
+        elif 7 <= retorno['media'] < 9:
             conceito = 'BOM'
         else:
             conceito = 'EXCELENTE'
