@@ -14,7 +14,7 @@ def leiaFloat(txt):
         try:
             n = float(input(txt).replace(',', '.'))
         except:
-            print('ERRO! DIGITE UM NÚMERO VÁLIDO!')
+            print('ERRO! DIGITE UM NÚMERO REAL VÁLIDO!')
         else:
             break
     return n
@@ -22,5 +22,5 @@ def leiaFloat(txt):
 
 # Programa Principal
 n = leiaInt('Digite um número inteiro: ')
-f = leiaFloat('Digite um número decimal: ')
+f = leiaFloat('Digite um número real: ')
 print(f'Você acabou de digitar os números {n} e {f}')
